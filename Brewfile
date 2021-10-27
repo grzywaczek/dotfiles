@@ -35,7 +35,7 @@ brew 'php'
 brew 'composer'
 brew 'imagemagick'
 brew 'meilisearch'
-brew 'mysql'
+brew 'mariadb'
 brew 'nginx'
 brew 'node'
 brew 'redis'
@@ -55,6 +55,17 @@ cask 'the-unarchiver'
 cask 'tinkerwell'
 cask 'visual-studio-code'
 cask 'zoom'
+cask 'iterm2'
+cask 'phpstorm'
+cask 'webstorm'
+cask 'android-studio'
+cask 'paw'
+cask 'tint'
+cask 'audacity'
+cask 'helo'
+cask 'cleanshot'
+cask 'dropbox'
+cask 'vlc'
 
 # Fonts
 cask 'font-lato'
@@ -69,3 +80,6 @@ cask 'font-source-serif-pro'
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Things', id: 904280696
+mas 'Amphetamine', id: 937984704
+mas 'XMind', id: 1327661892
+mas 'Magnet', id: 441258766
