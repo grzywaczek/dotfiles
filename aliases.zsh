@@ -21,7 +21,7 @@ alias seed="php artisan db:seed"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+alias composer="php -d memory_limit=-1 /usr/local/homebrew/bin/composer"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
@@ -50,3 +50,7 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+
+# Brew
+alias ibrew="arch -x86_64 /usr/local/homebrew/bin/brew"
+alias brew="/opt/homebrew/bin/brew"
