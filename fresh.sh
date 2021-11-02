@@ -83,6 +83,7 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 git config --global user.email "mateusz.gostanski@gmail.com"
 git config --global user.name "Mateusz Gostański"
 git config --global init.defaultBranch main
+git config --global pull.rebase false
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source .macos
