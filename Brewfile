@@ -74,3 +74,5 @@ mas 'XMind', id: 1327661892
 mas 'Magnet', id: 441258766
 mas 'Spark', id: 1176895641
 mas 'iAWriter', id: 775737590
+mas 'Transmit', id: 1436522307
+mas 'Termius', id: 1176074088
