@@ -18,6 +18,8 @@ alias docs="lara && cd docs/"
 alias a="php artisan"
 alias fresh="php artisan migrate:fresh --seed"
 alias seed="php artisan db:seed"
+alias pu='vendor/bin/phpunit'
+alias xpu='XDEBUG_MODE=coverage vendor/bin/phpunit'
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
