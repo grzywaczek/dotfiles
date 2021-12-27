@@ -10,7 +10,13 @@ export PATH="$HOME/.node/bin:$PATH"
 # Use project specific binaries before global ones
 export PATH="node_modules/.bin:vendor/bin:$PATH"
 
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/homebrew/bin:/usr/local/homebrew/sbin:$PATH"
+# Homebrew (both)
+export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# Flutter
+# export PATH="$HOME/flutter/bin:$PATH"
+# export PATH="$HOME/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -20,3 +26,7 @@ export NVM_DIR="$HOME/.nvm"
 # I've disabled this for now because I only use "ls" which is
 # referenced in my aliases.zsh file directly.
 #export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
+# PHP 8.1
+#export PATH="/usr/local/homebrew/opt/php@8.1/bin:$PATH"
+#export PATH="/usr/local/homebrew/opt/php@8.1/sbin:$PATH"

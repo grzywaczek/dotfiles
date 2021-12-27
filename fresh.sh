@@ -22,24 +22,26 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.dotfiles
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
+  echo "Installing Homebrew (Intel)"
+  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
   echo "Installing Homebrew (ARM)"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-  echo "Installing Homebrew (Intel)"
-  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  alias abrew="/opt/homebrew/bin/brew"
 fi
 
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/homebrew/bin:/usr/local/homebrew/sbin:$PATH"
+export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 echo "Update Homebrew recipes"
-brew update
 arch -x86_64 /usr/local/homebrew/bin/brew update
+/opt/homebrew/bin/brew update
 
 echo "Installing all our dependencies with bundle..."
-brew tap homebrew/bundle
-brew bundle
 arch -x86_64 /usr/local/homebrew/bin/brew tap homebrew/bundle
 arch -x86_64 /usr/local/homebrew/bin/brew bundle
+/opt/homebrew/bin/brew tap homebrew/bundle
+/opt/homebrew/bin/brew bundle
 
 echo "Install node using nvm"
 export NVM_DIR="$HOME/.nvm"
@@ -56,6 +58,10 @@ mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'poiu4014'; FLUSH 
 echo "Installing PHP extensions with PECL"
 pecl install imagick redis swoole
 
+echo "Installing Symfony CLI"
+curl -sS https://get.symfony.com/cli/installer | bash
+mv $HOME/.symfony/bin/symfony /usr/local/bin/symfony
+
 echo "Installing global Composer packages"
 /usr/local/bin/composer global require laravel/installer laravel/valet beyondcode/expose
 /usr/local/bin/composer global require laravel/vapor-cli --update-with-dependencies
@@ -64,7 +70,6 @@ echo "Installing Laravel Valet"
 $HOME/.composer/vendor/bin/valet install
 
 echo "Creating directories for projects"
-mkdir $HOME/rywal
 mkdir $HOME/broda
 mkdir $HOME/grixu
 

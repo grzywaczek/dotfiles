@@ -24,37 +24,39 @@ brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
 
 # Development
+brew 'mysql'
 brew 'meilisearch'
-brew 'mariadb'
-brew 'nvm'
 brew 'redis'
-brew 'yarn'
+brew 'nvm'
 
 # Apps
 cask '1password'
+cask 'android-studio'
+cask 'audacity'
+cask 'alfred'
+cask 'cleanshot'
+cask 'dash'
 cask 'docker'
+cask 'dropbox'
 cask 'google-chrome'
 cask 'imageoptim'
+cask 'pdf-expert'
 cask 'phpmon'
+cask 'helo'
 cask 'ray'
 cask 'slack'
 cask 'tableplus'
 cask 'telegram-desktop'
 cask 'the-unarchiver'
 cask 'tinkerwell'
-cask 'visual-studio-code'
-cask 'zoom'
 cask 'iterm2'
 cask 'phpstorm'
 cask 'webstorm'
-cask 'android-studio'
 cask 'paw'
 cask 'tint'
-cask 'audacity'
-cask 'helo'
-cask 'cleanshot'
-cask 'dropbox'
 cask 'vlc'
+cask 'visual-studio-code'
+cask 'zoom'
 
 # Fonts
 cask 'font-lato'
@@ -76,3 +78,6 @@ mas 'Spark', id: 1176895641
 mas 'iAWriter', id: 775737590
 mas 'Transmit', id: 1436522307
 mas 'Termius', id: 1176074088
+mas 'Telegram', id: 747648890
+mas 'JW Library', id: 672417831
+mas 'JWLM', id: 1539780103

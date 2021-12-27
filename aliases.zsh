@@ -1,7 +1,7 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="source $HOME/.zshrc"
-alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias flushdns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
@@ -54,5 +54,11 @@ alias unstage="git restore --staged ."
 alias wip="commit wip"
 
 # Brew
-alias ibrew="arch -x86_64 /usr/local/homebrew/bin/brew"
-alias brew="/opt/homebrew/bin/brew"
+# alias ibrew="arch -x86_64 /usr/local/homebrew/bin/brew"
+alias abrew="/opt/homebrew/bin/brew"
+
+# Redis
+alias flush-redis="redis-cli FLUSHALL"
+
+# VSCode
+alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
