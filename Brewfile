@@ -22,6 +22,18 @@ brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
+brew 'bat'
+brew 'exa'
+brew 'duf'
+brew 'ripgrep'
+brew 'diff-so-fancy'
+brew 'fx'
+brew 'jq'
+brew 'tldr'
+brew 'glances'
+brew 'procs'
+brew 'dog'
+brew 'glow'
 
 # Development
 brew 'mysql'

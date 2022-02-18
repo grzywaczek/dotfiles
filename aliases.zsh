@@ -30,10 +30,10 @@ alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
 
 # Docker
-alias docker-composer="docker-compose"
+alias docker-composer="docker compose"
 
 # SQL Server
-alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=LaravelWow1986! -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
+alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=poiu4014 -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
 
 # Git
 alias gst="git status"
@@ -54,7 +54,6 @@ alias unstage="git restore --staged ."
 alias wip="commit wip"
 
 # Brew
-# alias ibrew="arch -x86_64 /usr/local/homebrew/bin/brew"
 alias abrew="/opt/homebrew/bin/brew"
 
 # Redis
@@ -62,3 +61,9 @@ alias flush-redis="redis-cli FLUSHALL"
 
 # VSCode
 alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
+
+# Better versions of some unix utilities
+alias cat='bat'
+alias ls='exa'
+alias du='duf'
+alias dig='dog'
