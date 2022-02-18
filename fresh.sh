@@ -34,14 +34,15 @@ fi
 export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 echo "Update Homebrew recipes"
-arch -x86_64 /usr/local/homebrew/bin/brew update
 /opt/homebrew/bin/brew update
+arch -x86_64 /usr/local/homebrew/bin/brew update
 
 echo "Installing all our dependencies with bundle..."
-arch -x86_64 /usr/local/homebrew/bin/brew tap homebrew/bundle
-arch -x86_64 /usr/local/homebrew/bin/brew bundle
 /opt/homebrew/bin/brew tap homebrew/bundle
 /opt/homebrew/bin/brew bundle
+arch -x86_64 /usr/local/homebrew/bin/brew tap homebrew/bundle
+arch -x86_64 /usr/local/homebrew/bin/brew bundle --file=./x86/Brewfile
+
 
 echo "Install node using nvm"
 export NVM_DIR="$HOME/.nvm"

@@ -12,7 +12,7 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 
 # Homebrew (both)
 export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:$PATH"
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin"
 
 # Flutter
 # export PATH="$HOME/flutter/bin:$PATH"
