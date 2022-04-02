@@ -23,7 +23,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.dotfiles
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   echo "Installing Homebrew (Intel)"
-  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) --prefix /usr/local"
+  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   echo "Installing Homebrew (ARM)"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -31,15 +31,18 @@ if test ! $(which brew); then
   alias abrew="/opt/homebrew/bin/brew"
 fi
 
-export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-
-alias brew="HOMEBREW_CELLAR=/usr/local/Cellar brew"
+export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 echo "Update Homebrew recipes (x86)"
-arch -x86_64 /usr/local/bin/brew update
+arch -x86_64 /usr/local/homebrew/bin/brew update
 echo "Installing all our dependencies with bundle..."
 arch -x86_64 /usr/local/homebrew/bin/brew tap homebrew/bundle
+arch -x86_64 /usr/local/homebrew/bin/brew tap shivammathur/php
 arch -x86_64 /usr/local/homebrew/bin/brew bundle --file=$HOME/.dotfiles/x86/Brewfile
+
+echo "Installing PHP"
+arch -x86_64 /usr/local/homebrew/bin/brew install shivammathur/php/php@8.1
+arch -x86_64 /usr/local/homebrew/bin/brew composer
 
 echo "Update Homebrew recipes (arm)"
 /opt/homebrew/bin/brew update

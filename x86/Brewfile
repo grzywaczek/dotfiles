@@ -14,7 +14,10 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Development
-brew 'php'
-brew 'composer'
 brew 'imagemagick'
 brew 'nginx'
+
+# PHP dependencies
+brew 'curl'
+brew 'unixodbc'
+brew 'freetds'
