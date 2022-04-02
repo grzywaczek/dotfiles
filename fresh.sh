@@ -42,6 +42,7 @@ arch -x86_64 /usr/local/homebrew/bin/brew bundle --file=$HOME/.dotfiles/x86/Brew
 
 echo "Installing PHP"
 arch -x86_64 /usr/local/homebrew/bin/brew install shivammathur/php/php@8.1
+brew link --overwrite --force shivammathur/php/php@8.1
 arch -x86_64 /usr/local/homebrew/bin/brew composer
 
 echo "Update Homebrew recipes (arm)"
