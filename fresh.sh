@@ -33,6 +33,8 @@ fi
 
 export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
+alias brew="HOMEBREW_CELLAR=/usr/local/Cellar brew"
+
 echo "Update Homebrew recipes (x86)"
 arch -x86_64 /usr/local/bin/brew update
 echo "Installing all our dependencies with bundle..."
@@ -110,4 +112,4 @@ git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source ./$HOME/.dotfiles/.macos
+source $HOME/.dotfiles/.macos
