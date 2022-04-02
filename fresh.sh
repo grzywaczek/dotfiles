@@ -14,7 +14,7 @@ xcode-select --install
 # Check for Oh My Zsh and install if we don't have it
 if test ! $(which omz); then
   echo "Installing Oh-my-zsh"
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 echo "Installing Powerlevel10k"
