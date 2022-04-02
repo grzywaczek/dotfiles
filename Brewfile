@@ -92,5 +92,3 @@ mas 'iAWriter', id: 775737590
 mas 'Transmit', id: 1436522307
 mas 'Termius', id: 1176074088
 mas 'Telegram', id: 747648890
-mas 'JW Library', id: 672417831
-mas 'JWLM', id: 1539780103

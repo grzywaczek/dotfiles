@@ -23,7 +23,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.dotfiles
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   echo "Installing Homebrew (Intel)"
-  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) --prefix /usr/local"
 
   echo "Installing Homebrew (ARM)"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -31,18 +31,20 @@ if test ! $(which brew); then
   alias abrew="/opt/homebrew/bin/brew"
 fi
 
-export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
-echo "Update Homebrew recipes"
+echo "Update Homebrew recipes (x86)"
+arch -x86_64 /usr/local/bin/brew update
+echo "Installing all our dependencies with bundle..."
+arch -x86_64 /usr/local/homebrew/bin/brew tap homebrew/bundle
+arch -x86_64 /usr/local/homebrew/bin/brew bundle --file=$HOME/.dotfiles/x86/Brewfile
+
+echo "Update Homebrew recipes (arm)"
 /opt/homebrew/bin/brew update
-arch -x86_64 /usr/local/homebrew/bin/brew update
 
 echo "Installing all our dependencies with bundle..."
 /opt/homebrew/bin/brew tap homebrew/bundle
-/opt/homebrew/bin/brew bundle
-arch -x86_64 /usr/local/homebrew/bin/brew tap homebrew/bundle
-arch -x86_64 /usr/local/homebrew/bin/brew bundle --file=./x86/Brewfile
-
+/opt/homebrew/bin/brew bundle --file=$HOME/.dotfiles/Brewfile
 
 echo "Install node using nvm"
 export NVM_DIR="$HOME/.nvm"
@@ -75,7 +77,7 @@ mkdir $HOME/broda
 mkdir $HOME/grixu
 
 echo "Cloning Github repositories"
-./clone.sh
+./$HOME/.dotfiles/clone.sh
 
 echo "Configuring system..."
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
@@ -108,4 +110,4 @@ git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source .macos
+source ./$HOME/.dotfiles/.macos

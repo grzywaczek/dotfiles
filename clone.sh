@@ -3,7 +3,7 @@
 echo "Cloning repositories..."
 
 BRODA=$HOME/broda
-GRIXU=$SITES/grixu
+GRIXU=$HOME/grixu
 
 # Broda
 git clone git@github.com:grixu/ee.git $BRODA/ee
