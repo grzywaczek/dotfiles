@@ -40,11 +40,7 @@ echo "Installing all our dependencies with bundle..."
 brew link --force --overwrite shivammathur/php/php@8.1
 
 echo "Installing composer"
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-sudo mv composer.phar /usr/local/bin/composer
+brew install composer
 
 echo "Install node using nvm"
 export NVM_DIR="$HOME/.nvm"
@@ -63,8 +59,8 @@ curl -sS https://get.symfony.com/cli/installer | bash
 mv $HOME/.symfony/bin/symfony /usr/local/bin/symfony
 
 echo "Installing global Composer packages"
-/usr/local/bin/composer global require laravel/installer laravel/valet beyondcode/expose
-/usr/local/bin/composer global require laravel/vapor-cli --update-with-dependencies
+composer global require laravel/installer laravel/valet beyondcode/expose
+composer global require laravel/vapor-cli --update-with-dependencies
 
 echo "Installing Laravel Valet"
 $HOME/.composer/vendor/bin/valet install

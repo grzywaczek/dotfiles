@@ -23,7 +23,7 @@ alias xpu='XDEBUG_MODE=coverage vendor/bin/phpunit'
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias composer="php -d memory_limit=-1 /usr/local/homebrew/bin/composer"
+alias composer="php -d memory_limit=-1 /opt/homebrew/bin/composer"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"

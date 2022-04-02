@@ -61,7 +61,6 @@ brew 'gifsicle'
 cask '1password'
 cask 'android-studio'
 cask 'audacity'
-cask 'alfred'
 cask 'cleanshot'
 cask 'calibre'
 cask 'dash'
@@ -85,6 +84,8 @@ cask 'vlc'
 cask 'visual-studio-code'
 cask 'zoom'
 cask 'raycast'
+cask 'transmit'
+
 
 # Fonts
 cask 'font-lato'
@@ -101,10 +102,8 @@ mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Things', id: 904280696
 mas 'Amphetamine', id: 937984704
-mas 'XMind', id: 1327661892
 mas 'Magnet', id: 441258766
 mas 'Spark', id: 1176895641
 mas 'iAWriter', id: 775737590
-mas 'Transmit', id: 1436522307
 mas 'Termius', id: 1176074088
 mas 'Telegram', id: 747648890
