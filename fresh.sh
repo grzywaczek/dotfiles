@@ -37,6 +37,14 @@ echo "Update Homebrew recipes (arm)"
 echo "Installing all our dependencies with bundle..."
 /opt/homebrew/bin/brew tap homebrew/bundle
 /opt/homebrew/bin/brew bundle --file=$HOME/.dotfiles/Brewfile
+brew link --force --overwrite shivammathur/php/php@8.1
+
+echo "Installing composer"
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/bin/composer
 
 echo "Install node using nvm"
 export NVM_DIR="$HOME/.nvm"
@@ -49,9 +57,6 @@ npm -g install yarn
 
 echo "Set default MySQL root password and auth type"
 mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'poiu4014'; FLUSH PRIVILEGES;"
-
-echo "Installing PHP extensions with PECL"
-pecl install imagick redis swoole
 
 echo "Installing Symfony CLI"
 curl -sS https://get.symfony.com/cli/installer | bash
