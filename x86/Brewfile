@@ -6,18 +6,3 @@ tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
-brew 'awscli'
-brew 'jpegoptim'
-brew 'optipng'
-brew 'pngquant'
-brew 'svgo'
-brew 'gifsicle'
-
-# Development
-brew 'imagemagick'
-brew 'nginx'
-
-# PHP dependencies
-brew 'curl'
-brew 'unixodbc'
-brew 'freetds'
