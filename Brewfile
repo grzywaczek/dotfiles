@@ -2,6 +2,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
+tap 'homebrew/cask-drivers'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
 tap 'shivammathur/php'
@@ -67,6 +68,7 @@ cask 'dash'
 cask 'docker'
 cask 'dropbox'
 cask 'google-chrome'
+cask 'google-chrome-canary'
 cask 'imageoptim'
 cask 'pdf-expert'
 cask 'phpmon'
@@ -85,6 +87,7 @@ cask 'visual-studio-code'
 cask 'zoom'
 cask 'raycast'
 cask 'transmit'
+cask 'displaylink'
 
 
 # Fonts
