@@ -39,8 +39,7 @@ brew 'dog'
 brew 'glow'
 
 # Development
-brew 'mysql'
-brew 'meilisearch'
+brew 'postgresql'
 brew 'redis'
 brew 'nvm'
 brew 'imagemagick'
@@ -57,37 +56,37 @@ brew 'optipng'
 brew 'pngquant'
 brew 'svgo'
 brew 'gifsicle'
+brew 'rustup-init'
 
 # Apps
 cask '1password'
 cask 'android-studio'
 cask 'audacity'
 cask 'cleanshot'
-cask 'calibre'
+cask 'charles'
 cask 'dash'
 cask 'docker'
 cask 'dropbox'
+cask 'fantastical'
 cask 'google-chrome'
 cask 'google-chrome-canary'
 cask 'imageoptim'
 cask 'pdf-expert'
-cask 'phpmon'
-cask 'helo'
 cask 'ray'
+cask 'raycast'
 cask 'slack'
 cask 'tableplus'
 cask 'the-unarchiver'
-cask 'tinkerwell'
-cask 'iterm2'
-cask 'phpstorm'
 cask 'paw'
 cask 'tint'
 cask 'vlc'
 cask 'visual-studio-code'
 cask 'zoom'
-cask 'raycast'
 cask 'transmit'
 cask 'displaylink'
+cask 'phpstorm'
+cask 'intellij-idea'
+cask 'jetbrains-toolbox'
 
 
 # Fonts
@@ -106,7 +105,5 @@ mas 'Numbers', id: 409203825
 mas 'Things', id: 904280696
 mas 'Amphetamine', id: 937984704
 mas 'Magnet', id: 441258766
-mas 'Spark', id: 1176895641
 mas 'iAWriter', id: 775737590
-mas 'Termius', id: 1176074088
 mas 'Telegram', id: 747648890

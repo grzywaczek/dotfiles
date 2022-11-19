@@ -22,16 +22,13 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.dotfiles
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  # echo "Installing Homebrew (Intel)"
-  # arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
   echo "Installing Homebrew (ARM)"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
-echo "Update Homebrew recipes (arm)"
+echo "Update Homebrew recipes"
 /opt/homebrew/bin/brew update
 
 echo "Installing all our dependencies with bundle..."
@@ -51,25 +48,20 @@ nvm install 14
 echo "Install yarn using npm"
 npm -g install yarn
 
-echo "Set default MySQL root password and auth type"
-mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'poiu4014'; FLUSH PRIVILEGES;"
-
-echo "Installing Symfony CLI"
-curl -sS https://get.symfony.com/cli/installer | bash
-mv $HOME/.symfony/bin/symfony /usr/local/bin/symfony
+#echo "Set default MySQL root password and auth type"
+#mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'poiu4014'; FLUSH PRIVILEGES;"
 
 echo "Installing global Composer packages"
-composer global require laravel/installer laravel/valet beyondcode/expose
-composer global require laravel/vapor-cli --update-with-dependencies
+composer global require laravel/valet beyondcode/expose
 
 echo "Installing Laravel Valet"
 $HOME/.composer/vendor/bin/valet install
 
 echo "Creating directories for projects"
-mkdir $HOME/broda
+mkdir $HOME/evionica
 mkdir $HOME/grixu
 
-echo "Cloning Github repositories"
+echo "Cloning repositories"
 ./$HOME/.dotfiles/clone.sh
 
 echo "Configuring system..."

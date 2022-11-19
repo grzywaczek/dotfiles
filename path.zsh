@@ -4,18 +4,17 @@ export PATH="$DOTFILES/bin:$PATH"
 # Load Composer tools
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
+# Load Rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Load Node global installed binaries
-export PATH="$HOME/.node/bin:$PATH"
+export PATH="$HOME/.node/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Use project specific binaries before global ones
 export PATH="node_modules/.bin:vendor/bin:$PATH"
 
 # Homebrew (both)
 export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-
-# Flutter
-# export PATH="$HOME/flutter/bin:$PATH"
-# export PATH="$HOME/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
