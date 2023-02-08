@@ -3,7 +3,6 @@
 echo "Cloning repositories..."
 
 EVIONICA=$HOME/evionica
-GRIXU=$HOME/grixu
 
 # Evionica
 git clone git@gitlab.com:Evionica_DEV/ata/ata-frontend-application.git $EVIONICA/ata-frontend
