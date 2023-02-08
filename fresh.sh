@@ -59,7 +59,6 @@ $HOME/.composer/vendor/bin/valet install
 
 echo "Creating directories for projects"
 mkdir $HOME/evionica
-mkdir $HOME/grixu
 
 echo "Cloning repositories"
 ./$HOME/.dotfiles/clone.sh
@@ -73,8 +72,8 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Setting up git 
-git config --global user.email "mateusz.gostanski@gmail.com"
-git config --global user.name "Mateusz Gostański"
+git config --global user.email "a.grzywacz@evionica.com"
+git config --global user.name "Anna Grzywacz"
 git config --global init.defaultBranch main
 git config --global pull.rebase true
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
